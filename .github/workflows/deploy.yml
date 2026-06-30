@@ -50,6 +50,7 @@ jobs:
       - name: Publish to Nexus
         if: github.ref == 'refs/heads/main'
         run: mvn deploy -DskipTests
+        continue-on-error: true
 
       - name: Upload JAR artifact
         if: github.ref == 'refs/heads/main'
