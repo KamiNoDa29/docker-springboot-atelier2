@@ -39,8 +39,22 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+	    </plugin>
+	    <plugin>
+                <groupId>org.sonarsource.scanner.maven</groupId>
+                <artifactId>sonar-maven-plugin</artifactId>
+                <version>3.10.0.2594</version>
             </plugin>
         </plugins>
     </build>
-
+<distributionManagement>
+        <repository>
+            <id>nexus</id>
+            <url>https://upgraded-doodle-v6v4gxjw97743xg6x-8081.app.github.dev/repository/maven-releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>nexus</id>
+            <url>https://upgraded-doodle-v6v4gxjw97743xg6x-8081.app.github.dev/repository/maven-snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
 </project>
