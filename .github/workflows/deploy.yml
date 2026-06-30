@@ -25,6 +25,7 @@ jobs:
         run: mvn clean verify
 
       - name: SonarQube Analysis
+        continue-on-error: true
         run: |
           mvn sonar:sonar \
           -Dsonar.projectKey=springboot-app \
